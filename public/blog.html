@@ -9,7 +9,9 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/phonescreen.css"> 
+    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/smallscreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/phonescreen.css">
+    <script src="js/main.js"></script>
   </head>
   <body>
     <sidebar>
@@ -51,51 +53,29 @@
         <p class="footertext"> <br><br>Huzaifa Patel &copy;2025</p>
       </footer>
     </sidebar>
-
-  <div class="container">
-  
+    <div class="container"> 
     <div class="content">
-    <nav>
+      <nav>
       <ul>
-        <li class="navv"  id="top">
-          <a class="active" href="index.html">.aboutMe()</a>
+        <li class="navv">
+          <a  href="index.html">.aboutMe()</a>
         </li>
         <li class="navv">
-          <a href="blog.html">.projects()</a>
+          <a class="active" href="blog.html">.projects()</a>
         </li >
         <li class="navv">
-          <a href="blog.html">.skills()</a>
+          <a href="skills.html">.skills()</a>
         </li>
         <li class="navv">
           <a href="contact.html">.contact()</a>
         </li>
       </ul>
     </nav>
-    <div class="indexText">
-      <div class="c1">
-        <div class="type">
-          <strong style="color: #008F11;">Huzaifa Patel</strong>
+    <div class="c6">
+            <div class="type5"><strong style="color: #00ff41;">Projects</strong></div>
         </div>
-      </div>
-      <div class="c2">
-        <div class="type2">
-          <p style="display: inline;">Cybersecurity </p>
-        </div>
-      </div>
-      <div class="c3">
-        <div class="type3">
-          <p style="display: inline;">& Machine Learning </p>
-        </div>
-      </div>
-    </div>
-    <header>About Me</header>
-
-    <p>Hands on-experience in network penetration testing, malware analysis, deep machine learning, threat intelligence and cyber forensic investigation.</p><p> Alongside my Computer Science with Cybersecurity degree, I have earned the Google Cybersecurity Professional Certificate and have been working the past few years to gain experience and develop my professional skills.</p>
-
-    <header>Interests</header>
-    <p>My interests include Cybersecurity, particularly within Malware Analysis, Machine Learning & AI, Web Development, and Information Security Management within organisations. I am particularly interested in the areas of network penetration testing, threat intelligence, and cyber forensic investigation.</p>
-    <header>Projects</header>
     <div class="services-grid">
+    <!-- Row 1 -->
   <a class="aboutmelinks" href="MalwareAnalysis.html">
   <div class="service-card">
     <div class="service-icon">
@@ -118,6 +98,7 @@
     </div>
   </div>
   </a>
+  <!-- Row 2 -->
   <a class="aboutmelinks" href="SecureWebApp.html">
     <div class="service-card">
     <div class="service-icon">
@@ -139,11 +120,64 @@
     </div>
   </div>
   </a>
+  <!-- Row 3 -->
+  <a class="aboutmelinks" href="PenTestS1.html">
+  <div class="service-card">
+    <div class="service-icon">
+      <svg width="32" height="32" fill="none" stroke="#00ff41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="24" height="14" rx="2"/><path d="M8 10V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/></svg>
+    </div>
+    <div>
+      <h3>Penetration testing Stage 1</h3>
+      <p style="font-size:smaller;">OSINT Reconnaissance</p>
+    </div>
+  </div>
+  </a>
+  <a class="aboutmelinks" href="CyberThreats.html">
+  <div class="service-card">
+    <div class="service-icon">
+      <svg width="321" height="321" viewBox="0 0 32 32" fill="none" stroke="#00ff41" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle stroke-width="2" cx="14" cy="14" r="8" /><line stroke-width="2" x1="20" y1="20" x2="26" y2="26" /><path d="M14 10 l4 7 h-8 z" /><line x1="14" y1="12.5" x2="14" y2="14.5" /><circle cx="14" cy="15.9" r="0.1" fill="#ff4c4c" /></svg>
+    </div>
+    <div>
+      <h3>Blogpost:</h3>
+      <p style="font-size:smaller;">Cyber threat analysis</p>
+    </div>
+  </div>
+  </a>
+  <!-- Row 4 -->
+  <a class="aboutmelinks" href="webstoredesign.html">
+  <div class="service-card">
+    <div class="service-icon">
+      <svg width="32" height="32" fill="none" stroke="#00ff41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="24" height="14" rx="2"/><path d="M8 10V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/></svg>
+    </div>
+    <div>
+      <h3>Webstore Design</h3>
+      <p style="font-size:smaller;">UI design project</p>
+    </div>
+  </div>
+  </a>
+  <a class="aboutmelinks" href="Touchscreens-Essay.html">
+  <div class="service-card">
+    <div class="service-icon">
+      <svg width="32" height="32" fill="none" stroke="#00ff41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="24" height="14" rx="2"/><path d="M8 10V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/></svg>
+    </div>
+    <div>
+      <h3>Blogpost:</h3>
+      <p style="font-size:smaller;">How touchscreens work</p>
+    </div>
+  </div>
+  </a>
 </div>
+      
 
-</div>
-</div>
-<a href="#top" title="Back To The Top">
+      
+      
+
+    </div>
+    </div> 
+    <a class="blogtocontact" href="contact.html" title="Contact Me">Have any questions?<br> Contact me</a>
+
+
+    <a href="#top" title="Back To The Top">
       <button class="Btn">
         <svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
         <p class="text">Back to Top</p>
@@ -152,10 +186,10 @@
     <nav class="nav2">
       <ul>
         <li class="navv"  id="top">
-          <a class="active" href="index.html">.aboutMe()</a>
+          <a href="index.html">.aboutMe()</a>
         </li>
         <li class="navv">
-          <a href="blog.html">.projects()</a>
+          <a class="active" href="blog.html">.projects()</a>
         </li >
         <li class="navv">
           <a href="skills.html">.skills()</a>
@@ -165,5 +199,5 @@
         </li>
       </ul>
     </nav>
-  </body>
+</body>
 </html>

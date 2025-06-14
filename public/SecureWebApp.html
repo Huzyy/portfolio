@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Huzaifa Patel | Secure Web Application Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="Secure Web Application Project by Huzaifa Patel">
+    <meta name="keywords" content="Cybersecurity, Secure Web Application, Portfolio, Huzaifa Patel">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono">
+    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="../css/smallscreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/phonescreen.css">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <sidebar>
+      <div class="logo">
+        <div class="anim">
+          <span style="color: white; --i:1" class="sp">{</span
+          ><span style="--i:1" class="sp">H</span
+          ><span style="--i:2" class="sp">u</span
+          ><span style="--i:3" class="sp">z</span
+          ><span style="--i:4" class="sp">a</span
+          ><span style="--i:5" class="sp">i</span
+          ><span style="--i:6" class="sp">f</span
+          ><span style="--i:7" class="sp">a</span
+          ><span style="color: white; --i:7" class="sp">}</span>
+        </div>
+      </div>
+      <ul>
+        <li class="navv">
+          <a class="smlogo1" href="https://www.github.com/huzyy" target="_blank">
+            <img class="smlogos" src="../images/social-media-icons/GitHub-Mark-Light-32px.png" alt="My Github profile">
+            <p class="navtext">Github</p>
+          </a>
+        </li>
+        <li class="navv">
+          <a class="smlogo1" href="https://www.linkedin.com/in/user-huzaifapatel/" target="_blank">
+            <img class="smlogos" src="../images/social-media-icons/In-White-26.png" alt="My Linkedin profile">
+            <p class="navtext">LinkedIn</p>
+          </a>
+        </li >
+        <li class="navv">
+          <a class="smlogo2" href="mailto:h.patel33@edu.salford.ac.uk,huzaifa123467890@outlook.com?subject=We%20should%20hire%20you%20Huzaifa!" target="_blank">
+            <img class="smlogos" src="../images/social-media-icons/mail.png" alt="My email">
+            <p class="navtext">Email</p>
+          </a>
+        </li>
+      </ul>
+      <footer>
+        <p class="footertext"> <br><br>Huzaifa Patel &copy;2025 </p>
+      </footer>
+    </sidebar>
+
+    <div class="container">
+      <div class="content">
+        <nav>
+          <ul>
+            <li class="navv" id="top">
+              <a href="index.html">.aboutMe()</a>
+            </li>
+            <li class="navv">
+              <a class="active" href="blog.html">.projects()</a>
+            </li>
+            <li class="navv">
+              <a href="skills.html">.skills()</a>
+            </li>
+            <li class="navv">
+              <a href="contact.html">.contact()</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Project Overview -->
+        <div class="c6">
+          <div class="type5">
+            <strong style="color: #00ff41;">Secure Scheduling Web App</strong>
+          </div>
+        </div>
+        <header>Overview</header>
+        <p>Online scheduling systems are essential to the day-to-day operations of businesses across all industries. </p>
+        <p>This project involved designing, developing, and testing a secure web application with robust protection against the common web threats detailed in the UK Cyber Essentials standard and OWASP Top 10 such as XSS, CSRF, SQL Injection, and authentication vulnerabilities.
+        </p>
+        <p>The web app is a secure scheduling solution aimed for small businesses. It is built using modern web technologies such as the Laravel framework and follows best practices in secure coding, input validation, and session management.
+        </p>
+        <header>Technologies</header>
+        <p>Development:</p>
+        <em style="color: #008F11">PHP Laravel framework, MySQL database, XAMPP Web Server, HTML, CSS, Tailwind, JavaScript, Lucid.</em>
+        <p>Testing:</p>
+        <em style="color: #008F11">VirtualBox VM, Kali Linux, Burp Suite, SQL Map, Inetsim dummy web-server. </em>
+
+
+
+        <header>Security Testing</header>
+        <p>This section outlines a few of the penetration tests performed.</p>
+        <p>On Kali Linux, Inetsim was used to simulate internet services. Inetsim is a powerful tool that allows internet services to be simulated, acting as a fake or dummy server to capture network activity. The web application is limited to localhost and not exposed to the internet which makes it suitable for hosting during security testing. This is important as only this web application will be affected if the server crashes or becomes corrupted during security testing.</p>
+        <em style="color: #008F11">Brute-force </em>
+        <p>Burp Suite was used to perform a Sniper attack on the login page, which is a type of brute-force attack that attempts to guess the password by trying every possible combination. It is a powerful tool for web application security testing, allowing for the inspection and manipulation of web traffic.</p>
+        <a href="../images/webapp/burp.png" style="text-decoration: none;" target="_blank">
+        <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/burp.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+          </figure>
+          </a>
+        <p>The attack was unsuccessful as the login POST route restricts users to a maximum of 5 login attempts before they are automatically locked out of the login screen for 1 minute, successfully preventing brute-force attacks. </p>
+        <em style="color: #008F11">Cross-Site Request Forgery (CSRF) attack</em>
+        <a href="../images/webapp/csrf.png" style="text-decoration: none;" target="_blank">
+        <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/csrf.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+          </figure>
+          </a>
+        <p>CSRF tokens are in place at all input fields for editing or changing information, a unique, secret, and unpredictable value that is generated by the server and included in each request made by the client. This token is used to verify that the request is coming from a legitimate user and not an attacker.</p>
+        
+        <em style="color: #008F11">SQL Injection</em>
+        <p>Another test was performed using both manual testing and the SQLMap tool to test for SQL injection vulnerabilities.</p>
+        <p>URL encoding was also attempted, which encodes the apostrophe in URL encoding format %27. The payload ‘test%40example.com%27%20OR%201%3D1%20—’ was also rejected by the input validation. </p>
+        <a href="../images/webapp/val.png" style="text-decoration: none;" target="_blank">
+        <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/val.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+          </figure>
+          </a>
+        <a href="../images/webapp/val2.png" style="text-decoration: none;" target="_blank">
+        <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/val2.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+          </figure>
+          </a>
+        <p>Input sanitization and validation protected the web app against SQL Injection attacks as shown above.</p>
+
+        <!-- Screenshots Section -->
+        <header>Design</header>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em; justify-items: center; align-items: end;">
+        <a href="../images/webapp/mvc.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/mvc.jpg"  style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">MVC architecture</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/wireframes.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/wireframes.jpg"  style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Wireframes</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/wireframes2.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/wireframes2.jpg"  style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Wireframes</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/database.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/database.jpg"  style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Database design</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/crud.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/crud.jpg" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">CRUD operations logic</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/db.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/db.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Password reset tokens</figcaption>
+          </figure>
+        </a>
+        </div>
+
+        <header>User Interface</header>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em; justify-items: center; align-items: end;">
+                <a href="../images/webapp/homepage.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/homepage.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Homepage</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/login.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/login.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Login page</figcaption>
+          </figure>
+        </a>
+          <a href="../images/webapp/create.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/create.jpg" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Admin create event page</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/update.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/update.jpg" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Admin update event page</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/userevents.jpg" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/userevents.jpg" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">User Event table</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/adminevents.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/adminevents.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Admin Event table</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/usercalendar.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/usercalendar.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">User calendar</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/admincalendar.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/admincalendar.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Admin calendar</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/passwordreset.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/passwordreset.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Password reset email</figcaption>
+          </figure>
+        </a>
+        <a href="../images/webapp/errors.png" style="text-decoration: none;" target="_blank">
+            <figure style="max-width: 400px; width: 100%;">
+            <img src="../images/webapp/errors.png" style="width:100%;border-radius:8px;border:1px solid #222;">
+            <figcaption style="color:#00ff41; text-align:center; margin-top:0.5em;">Error messages</figcaption>
+          </figure>
+        </a>
+        </div>
+
+        <!-- PDF Report Section -->
+        <h2 style="color: #00ff41; margin-top:2em;">Project Report</h2>
+        <p>
+          For a detailed explanation of the security features, implementation, and testing process, please see a snippet from the project report below:
+        </p>
+        <object width="82%" height="600px" type="application/pdf" style="margin-left: 4em; margin-top: 3em;" data="pdf/Secure Scheduling System.pdf#zoom=70&scrollbar=0&toolbar=0&navpanes=0">
+    <p style="color: #00ff41;"> Unfortunately your browser does not support PDFs.</p>
+    </object>
+        <p>The web app does not infringe on any laws. All user details are protected in the password protected database with encryption for passwords. All images on the website are copyright free, open-sourced or images that I have created. Please see Section 8.3 in the report for more details.</p>
+      </div>
+    </div>
+
+    <a href="#top" title="Back To The Top">
+      <button class="Btn">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
+        <p class="text">Back to Top</p>
+      </button>
+    </a>
+  </body>
+</html>
