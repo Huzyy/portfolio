@@ -609,7 +609,7 @@ nav {
     background-color: transparent;
     width: 90%;
     height: 50px;
-    font-size: x-large;
+    font-size: 15px;
     font-family: "Azeret Mono", serif;
     color: gray;
     border: none;
@@ -621,7 +621,7 @@ nav {
     background-color: transparent;
     width: 90%;
     height: 50px;
-    font-size: x-large;
+    font-size: 15px;
     font-family: "Azeret Mono", serif;
     color: gray;
     border: none;
@@ -634,7 +634,7 @@ nav {
     width: 90%;
     min-height: 50px;
     max-height: 200px;
-    font-size: x-large;
+    font-size: 15px;
     font-family: "Azeret Mono", serif;
     color: gray;
     border: none;
@@ -644,7 +644,7 @@ nav {
 .submitcontact {
     width: 25%;
     height: 50px;
-    margin-left: 85%;
+    margin-left: 69%;
     border: none;
     background-color: #008F11;
     color: rgba(22, 22, 22, 0.9);
