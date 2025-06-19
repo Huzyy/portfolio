@@ -108,7 +108,7 @@ div.content {
     margin-left: 5%;
   }
   .type{
-    font-size: 1rem; 
+    font-size: 0.7rem; 
     overflow: hidden;
     border-right: .15em solid transparent;
     white-space: nowrap; 
@@ -117,7 +117,7 @@ div.content {
       typing 3s steps(32, end) forwards, blink 3s;
   }
   .type2{
-      font-size: 1rem; 
+      font-size: 0.1rem; 
       overflow: hidden;
       border-right: .15em solid transparent;
       white-space: nowrap; 
@@ -127,7 +127,7 @@ div.content {
       animation-delay: 3s;
   }
   .type3{
-      font-size: 1rem; 
+      font-size: 0.7rem; 
       overflow: hidden;
       border-right: .15em solid transparent; 
       white-space: nowrap; 
@@ -294,7 +294,7 @@ h2.matrixgiftext {
     color:#008F11 /* usage of the green colour scheme continues*/
 }
 .anim {
-    padding: 30px;
+    padding: 24px;
     padding-left: 0px;
     padding-right: 0px;
     position:relative;
@@ -303,7 +303,7 @@ h2.matrixgiftext {
 .anim span {
     position: relative;
     display: inline-block;
-    font-size: 30px;
+    font-size: 20px;
     color: #00ff41;
     text-align: center;
 }
@@ -672,28 +672,9 @@ h2.matrixgiftext {
     width: 98%;
 }
 
-a.blogtocontact {
-    position: fixed; /* fixed to always stay on the page*/
-    top:65%; /* positioning the button so it doesn't get in the way of content*/
-    right:0%;
-    bottom: 5%;
-    outline: none;
-    text-decoration: none;
-    display: inline;
-    text-align: center;
-    width: min-content;
-    height: 30px;
-    font-size: x-small;
-    color: gray;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    -moz-border-radius: 5px; /* browser compatibility*/
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    margin: 20px;
-    background: rgb(20,20,20);
-    text-align: center;
+/* Hide the .blogtocontact element */
+.blogtocontact {
+  display: none !important;
 }
 .contactlink {
     float: left;

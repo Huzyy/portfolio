@@ -65,7 +65,7 @@ sidebar::before {
   inset: 0;
   padding: 1px; /* Border thickness */
   border-radius: 18px;
-  background: linear-gradient(45deg, gray, rgba(0, 0, 0, 0));
+  background: linear-gradient(135deg, gray, rgba(0, 0, 0, 0));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -138,7 +138,7 @@ div.content::before {
   inset: 0; /* Adjust to match padding */
   padding: 1px; /* Thickness of border */
   border-radius: 18px;
-  background: linear-gradient(45deg, gray, rgba(0, 0, 0, 0));
+  background: linear-gradient(135deg, gray, rgba(0, 0, 0, 0));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -158,7 +158,38 @@ div.content::before {
   width: 100%;
   box-sizing: border-box;
 }
+.social-logos {
+  width: 100vw;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+}
+.social-logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  margin-left: 0;
+}
 
+/* Prevent logo boxes from being clipped and allow them to wrap */
+.social-logos-box {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  margin-bottom: 0.5rem;
+  flex: 0 0 auto;
+}
+  .social-logos-box img {
+    width: 40px;
+    height: 40px;
+  }
+  .social-logos-box p {
+    font-size: 0.95rem;
+    margin: 0.2em 0 0 0;
+    text-align: center;
+  }
 
 /*Code for typewriter*/
   .c1{
@@ -179,16 +210,16 @@ div.content::before {
     margin-left: 5%;
   }
   .type{
-    font-size: 1.5rem;
+    font-size: 1rem;
     overflow: hidden;
     border-right: .15em solid transparent;
     white-space: nowrap; 
     width: 0;
     animation: 
-      typing 3s steps(32, end) forwards, blink 3s;
+      typing 3s steps(32, end) forwards, blink 1s;
   }
   .type2{
-      font-size: 1.5rem;
+      font-size: 1rem;
       overflow: hidden;
       border-right: .15em solid transparent;
       white-space: nowrap; 
@@ -198,11 +229,11 @@ div.content::before {
       animation-delay: 3s;
   }
   .type3{
-      font-size: 1.5rem;
+      font-size: 0.75rem;
       overflow: hidden;
       border-right: .15em solid transparent; 
       white-space: nowrap; 
-      width: 0%;
+      width: 0;
       animation: 
         typing 3s steps(33, end) forwards ,blink 3s;
       animation-delay: 6s;
@@ -618,6 +649,7 @@ nav {
     background-color: #008F11;
     color: rgba(22, 22, 22, 0.9);
     font-size: large;
+    text-decoration: none;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: gray;
@@ -886,29 +918,10 @@ nav {
     width: 98%;
 }
 
-a.blogtocontact {
-    position: fixed; /* fixed to always stay on the page*/
-    top:65%; /* positioning the button so it doesn't get in the way of content*/
-    right:0%;
-    bottom: 5%;
-    outline: none;
-    text-decoration: none;
-    display: inline;
-    text-align: center;
-    width: min-content;
-    height: 60px;
-    font-size: medium;
-    color: rgb(128, 128, 128);
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    -moz-border-radius: 5px; /* browser compatibility*/
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    margin: 20px;
-    background: rgb(20,20,20);
-    text-align: center;
+.blogtocontact {
+  display: none !important;
 }
+
 .colorblindfilter:hover {
     border-color: #008F11;
 }
@@ -993,11 +1006,13 @@ a.blogtocontact {
     margin-top: 18%; margin-bottom: 10%;
 }
 .skillsstext {
-    padding-left: 9ch;
+    padding-left: 0ch;
 }
+
 .visitt {
     color: #00ff41;
     padding-left: 4ch;
+    text-decoration: none;
 }
 
 /* All code used from Uiverse.io is subject to the MIT license below*/
@@ -1037,7 +1052,11 @@ a.blogtocontact {
 }
 
 .container {
-  animation: fadeInUp 1s cubic-bezier(.4,0,.2,1) both;
+    margin: 0;
+    max-width: 100vw;
+  }
+.social-logos-row .social-logos-box:last-child {
+    display: none !important;
 }
 .text {
   font-size: 0.7em;

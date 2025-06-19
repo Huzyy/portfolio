@@ -196,33 +196,33 @@ div.content::before {
     margin-left: 5%;
   }
   .type{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     overflow: hidden;
     border-right: .15em solid transparent;
     white-space: nowrap; 
-    width: 0;
+    width: 30px;
     animation: 
-      typing 3s steps(32, end) forwards, blink 3s;
+      typing 3s steps(32, end) forwards, blink 1s;
   }
   .type2{
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       overflow: hidden;
       border-right: .15em solid transparent;
       white-space: nowrap; 
       width: 0;
       animation: 
-        typing 3s steps(34, end) forwards, blink 3s;
-      animation-delay: 3s;
+        typing 3s steps(34, end) forwards, blink 1s;
+      animation-delay: 2s;
   }
   .type3{
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       overflow: hidden;
       border-right: .15em solid transparent; 
       white-space: nowrap; 
       width: 0%;
       animation: 
         typing 3s steps(33, end) forwards ,blink 3s;
-      animation-delay: 6s;
+      animation-delay: 4s;
   }
   .type4{
     font-size: 1.5rem;
@@ -259,6 +259,15 @@ div.content::before {
     margin-top: 5%;
     margin-bottom: 21px;
 
+}
+.c6::after {
+    content: "";
+    display: block;
+    margin: 0.5rem 0 0 0;   /* Align underline to the left */
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #008F11 0%, #00ff41 100%);
+    border-radius: 2px;
 }
   @keyframes typing {
     from { width: 0 }
@@ -336,10 +345,54 @@ a.linktotop {
     background: rgba(0, 0, 0, 0.59);
     text-align: center;
 }
+.social-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social-logos-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center; /* Add this line to vertically center the boxes */
+  width: 100%;
+}
+.social-logos-box .p {
+  text-align: center;
+  align-items: end;
+}
+.social-logos-box {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  background-color: rgba(255, 255, 255, 0.092);
+  padding: 15px;
+  border-radius: 10px;
+  width: 80px;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.social-logos-box img {
+  align-items: end;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 
 .smlogos { /* Logos used as permitted */
     display: inline;
-    height: 26px;
+    height: 22px;
     max-width: 30px;
     padding: 0px;
     margin-right: 0%;
@@ -363,7 +416,7 @@ a.linktotop {
 }
 .smlogo { /* Logos used as permitted */
     display: inline;
-    height: 30px;
+    height: 24px;
     max-width: 30px;
     padding: 0px;
     margin-right: 0%;
@@ -432,7 +485,7 @@ h2.matrixgiftext {
 .anim span {
     position: relative;
     display: inline-block;
-    font-size: 30px;
+    font-size: 24px;
     color: #00ff41;
     text-align: center;
 }
@@ -508,7 +561,7 @@ nav ul {
     gap: 2rem;
 }
 header {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #00ff41;
     text-align: left;
     margin-top: 2.5rem;
@@ -611,7 +664,7 @@ nav ul li.navv a {
     text-decoration: none;
     font-weight: bold;
     font-family: "Azeret Mono", monospace;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
@@ -669,6 +722,8 @@ nav ul li.navv a:hover {
     background-color: #008F11;
     color: rgba(22, 22, 22, 0.9);
     font-size: large;
+    text-decoration: none;
+
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: gray;
@@ -688,7 +743,7 @@ nav ul li.navv a:hover {
 .footertext {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 11px;
     margin: 0%;
 }
 .indexText{
@@ -781,6 +836,7 @@ nav ul li.navv a:hover {
     animation: progres 4s linear;   
 
 }
+
 @keyframes progres{
     0%{
       width: 0%;
@@ -1052,6 +1108,7 @@ a.blogtocontact {
 .visitt {
     color: #00ff41;
     padding-left: 4ch;
+    text-decoration: none;
 }
 
 /* All code used from Uiverse.io is subject to the MIT license below*/
