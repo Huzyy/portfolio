@@ -360,7 +360,7 @@ a.linktotop {
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-  align-items: center; /* Add this line to vertically center the boxes */
+  align-items: center; 
   width: 100%;
 }
 .social-logos-box .p {
@@ -388,6 +388,48 @@ a.linktotop {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+.work-logos-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.092);
+  border-radius: 10px;
+  width: 80px;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 0 0.5rem;
+}
+
+.work-logos-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+
+.skillstext1 {
+  font-size: 1.25rem;
+  text-align: left;
+  color: #00ff41;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+  border-left: 4px solid #00ff41;
+  padding-left: 0.7em;
+  border-radius: 6px;
+}
+
+.skillstext2 {
+  font-size: 1rem;
+  color: #d1d1d1;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  padding-left: 2em;
+  line-height: 1.7;
 }
 
 .smlogos { /* Logos used as permitted */
