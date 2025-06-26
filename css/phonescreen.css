@@ -1116,11 +1116,14 @@ object[type="application/pdf"] {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.092);
   border-radius: 10px;
-  width: 80px;
+  width: 70px;
   height: 70px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  margin: 0 0.5rem;
+  padding: 7px;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .work-logos-box img {
